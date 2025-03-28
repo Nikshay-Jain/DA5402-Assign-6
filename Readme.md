@@ -72,13 +72,13 @@ Once the script is running, you can fetch the metrics for `task 1 & 2` via:
 ```bash
 http://localhost:18000/metrics
 ```
-A sample output for the same is attached here: [Output from localhost:18000](18000-metrics.pdf)
+A sample output from the same can be seen in `18000-metrics.pdf` file.
 
 For `task 3`, prometheus UI can b accessed by
 ```bash
 http://localhost:9090/
 ```
-A sample output for the same is attached here: [Output from localhost:9090](9090-graphs.pdf)
+A sample output from the same can be seen in `9090-graphs.pdf` file.
 
 ## Exposed Metrics
 ### Disk I/O Metrics
