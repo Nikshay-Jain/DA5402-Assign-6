@@ -8,7 +8,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("metrics.log"),  # Log output to a file
+        logging.FileHandler("logs.log"),  # Log output to a file
         logging.StreamHandler()  # Display logs in the console
     ]
 )
@@ -68,7 +68,6 @@ def collect_iostat_metrics():
                 
                 if parts[0] == "%user":
                     continue  
-
                 try:
                     cpu_avg_percent.labels(mode='user').set(float(parts[0]))
                     cpu_avg_percent.labels(mode='nice').set(float(parts[1]))
@@ -126,14 +125,14 @@ def graceful_exit(signum, frame):
     logging.info("Termination signal received. Exiting gracefully...")
     sys.exit(0)
 
-signal.signal(signal.SIGINT, graceful_exit)  # Handle Ctrl+C
-signal.signal(signal.SIGTERM, graceful_exit)  # Handle kill signal
+signal.signal(signal.SIGINT, graceful_exit)     # Handle Ctrl+C
+signal.signal(signal.SIGTERM, graceful_exit)    # Handle kill signal
 
 if __name__ == '__main__':
     start_http_server(18000, registry=registry)
     logging.info("Prometheus metrics server is running on port 18000")
 
-    run_duration = 60  # Change this to how long you want the script to run (in seconds)
+    run_duration = 360            # Change this to how long you want the script to run (in seconds)
     start_time = time.time()
 
     while time.time() - start_time < run_duration:
