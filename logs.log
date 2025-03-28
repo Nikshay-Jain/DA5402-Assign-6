@@ -1,0 +1,8 @@
+2025-03-28 06:38:10,246 - INFO - Prometheus metrics server is running on port 18000
+2025-03-28 06:39:11,102 - INFO - Metrics collection completed. Exiting.
+2025-03-28 06:39:33,642 - INFO - Prometheus metrics server is running on port 18000
+2025-03-28 06:44:34,484 - INFO - Metrics collection completed. Exiting.
+2025-03-28 06:45:15,789 - INFO - Prometheus metrics server is running on port 18000
+2025-03-28 06:46:06,963 - INFO - Termination signal received. Exiting gracefully...
+2025-03-28 06:46:17,577 - INFO - Prometheus metrics server is running on port 18000
+2025-03-28 06:52:18,410 - INFO - Metrics collection completed. Exiting.
